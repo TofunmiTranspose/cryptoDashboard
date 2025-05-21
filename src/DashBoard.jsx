@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer'
 const DashBoard = () => {
   return (
     <div className='app'>
-      <Navbar/>
+      <Navbar/>z
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/coin/:coinId' element={<Coin/>}/>

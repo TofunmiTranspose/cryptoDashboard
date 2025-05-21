@@ -1,0 +1,3 @@
+"stocks" ={
+  "BBV1W7O8R9LX8PRW"
+};

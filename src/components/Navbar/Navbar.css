@@ -70,4 +70,12 @@
   .navbar button img{
     width: 12px;
   }
+  @media (max-width: 365px){
+    .navbar select{
+      font-size: 10px;
+    }
+    .navbar button{
+      font-size: 10px;
+    }
+  }
 }
