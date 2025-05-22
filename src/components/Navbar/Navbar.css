@@ -5,8 +5,10 @@
   align-items: center;
   justify-content: space-between;
   height: 65px;
+  width: 99vw;
+  padding: 0 2%;
   color: black;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #dfdfdf;
 }
 .navbar .logo-container{
@@ -143,6 +145,7 @@
       width: 16px;
     }
     .navbar .burger{
+      border:1px solid black;
       padding: 12px;
       left: -10px;
     }
@@ -151,16 +154,13 @@
     }
     .navbar button{
     gap: 5px;
-    padding: 7px 8px;
+    padding: 5px 6px;
     border-radius: 20px;
-    font-size: 15px;
-    }
-    .navbar button:hover{
-      font-size: 11px;
-      padding: 7px 8px;
+    font-size: 12px;
+    color: white;
     }
     .navbar button img{
-      width: 8px;
+      width: 12px;
     }
     .side-bar .burger2{
     position: absolute;

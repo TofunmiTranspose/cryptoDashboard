@@ -44,17 +44,17 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-        <div>
-          FinDash
-        </div>
-        <div>
+        <Link onClick={sideToggler} to={'/'}>
+          TRANSPOSE
+        </Link>
+        <Link onClick={sideToggler} to={'/'}>
           Dashboard
-        </div>
+        </Link>
+        <Link onClick={sideToggler} to={`/coin/bitcoin`}>
+          Watchlist (btc)
+        </Link>
         <div>
-          Watchlist
-        </div>
-        <div>
-          Portfolio
+          <a href="https://tofunmitranspose.github.io/brand/">Portfolio</a>  
         </div>
         <div>
           Settings
