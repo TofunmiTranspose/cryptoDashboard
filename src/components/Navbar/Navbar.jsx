@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.png'
+import logo from './chart.svg'
 import arrow_icon from '../../assets/arrow_icon.png'
 import { CoinContext } from '../../context/CoinContext'
 import { Link } from 'react-router-dom'
@@ -31,11 +31,45 @@ const Navbar = () => {
     }
   }
 
+  function sideToggler(){
+    document.querySelector('.side-bar').classList.toggle('on');
+    document.querySelector('.home').classList.toggle('blur');
+  }
+
   return (
     <div className='navbar'>
+      <div className="side-bar on">
+        <div onClick={sideToggler} className="burger burger2">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+        <div>
+          FinDash
+        </div>
+        <div>
+          Dashboard
+        </div>
+        <div>
+          Watchlist
+        </div>
+        <div>
+          Portfolio
+        </div>
+        <div>
+          Settings
+        </div>
+      </div>
+      <div className='logo-container'>
+      <div onClick={sideToggler} className="burger burger1">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <Link to={'/'}>
-      <img className='logo' src={logo}/>
+      <img className='logo' src={logo}/> TRANSPOSE
       </Link>
+      </div>
       <ul>
         <Link to={'/'}><li>Home</li></Link>
         

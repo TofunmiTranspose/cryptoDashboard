@@ -1,13 +1,47 @@
 .navbar{
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10%;
-  color: #ddd;
-  border-bottom: 2px solid #3c3c3c;
+  height: 65px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #dfdfdf;
+}
+.navbar .logo-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: max(2vw, 12px);
+  font-size: 1.2rem;
+  align-items: center;
 }
 .navbar .logo{
-  width: max(12vw, 120px);
+  width: 25px;
+  color: white;
+
+}
+.navbar .burger{
+  position: relative;
+  left: -16px;
+  border: 1.5px solid #dfdfdf;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 19px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+}
+.navbar .burger span{
+  border: 0.5px solid #575757;
+  width: 13px;
+  border-radius: 2px;
 }
 .navbar ul{
   display: flex;
@@ -25,9 +59,9 @@
 .navbar select{
   padding: 5px 8px;
   border-radius: 6px;
-  border: 2px solid white;
+  border: 2px solid black;
   background: transparent;
-  color: white;
+  color: black;
 }
 .navbar select option{
   background-color: #09005c;
@@ -41,13 +75,42 @@
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
-  color: #393939;
-  background: white;
+  color: rgb(199, 199, 199);
+  background: black;
   border: none;
   cursor: pointer;
+  transition: ease 0.3s;
+}
+.navbar button:hover{
+  color: white;
+  font-size: 16px;
+  padding: 7px 15px;
 }
 .navbar button  img{
   width: 20px;
+}
+.side-bar{
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: white;
+  z-index: 5;
+  padding: 25px;
+  gap: 30px;
+  transition: ease-in-out 0.5s;
+}
+.on{
+  left: -100%;
+}
+.side-bar .burger2{
+  position: absolute;
+  left: 80%;
 }
 
 @media (max-width: 900px) {
@@ -69,6 +132,40 @@
   }
   .navbar button img{
     width: 12px;
+  }
+  @media (max-width: 500px){
+    .navbar{height: 60px;}
+    .navbar .logo-container{
+      font-size: 0.8rem;
+      gap: 0px;
+    }
+    .navbar .logo{
+      width: 16px;
+    }
+    .navbar .burger{
+      padding: 12px;
+      left: -10px;
+    }
+    .navbar select{
+      padding: 1px;
+    }
+    .navbar button{
+    gap: 5px;
+    padding: 7px 8px;
+    border-radius: 20px;
+    font-size: 15px;
+    }
+    .navbar button:hover{
+      font-size: 11px;
+      padding: 7px 8px;
+    }
+    .navbar button img{
+      width: 8px;
+    }
+    .side-bar .burger2{
+    position: absolute;
+    left: 80%;
+    }
   }
   @media (max-width: 365px){
     .navbar select{
