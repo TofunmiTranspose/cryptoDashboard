@@ -149,6 +149,9 @@
       padding: 12px;
       left: -10px;
     }
+    .navbar .burger span{
+      border-color: black;
+    }
     .navbar select{
       padding: 1px;
     }
@@ -173,6 +176,9 @@
     }
     .navbar button{
       font-size: 10px;
+    }
+    .navbar .burger span{
+      border-color: black;
     }
   }
 }
